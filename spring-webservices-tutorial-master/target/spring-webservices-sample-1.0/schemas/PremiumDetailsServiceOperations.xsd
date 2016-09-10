@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/metlife/business/service/accountservice" 
+xmlns:premium="http://webservices.metlife.com" targetNamespace="http://com/metlife/business/service/accountservice" elementFormDefault="qualified">
+	<xsd:import namespace="http://webservices.metlife.com" schemaLocation="PremiumDetails.xsd"/>	
+	<xsd:element name="PremiumDetailsRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="premium_no" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PremiumDetailsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="PremiumDetails" type="premium:Premium"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
